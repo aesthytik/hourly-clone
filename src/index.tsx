@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom'
 import App from './App'
 import './index.css';
 import reportWebVitals from './reportWebVitals'
-import { ChakraProvider } from '@chakra-ui/react'
 import { QueryParamProvider } from 'use-query-params'
 import { createBrowserHistory } from 'history'
 
@@ -11,11 +10,9 @@ export const history = createBrowserHistory()
 
 ReactDOM.render(
   <React.StrictMode>
-    <ChakraProvider>
       <QueryParamProvider history={history as any}>
         <App />
       </QueryParamProvider>
-    </ChakraProvider>
   </React.StrictMode>,
   document.getElementById('root')
 )
